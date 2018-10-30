@@ -21,10 +21,6 @@ alias vi "nvim"
 alias vim "nvim"
 alias vimdiff "nvim -d"
 
-# automatically use python3
-alias python "python3"
-alias pip "pip3"
-
 # For FUN! :) ~~~~~~~~~~~~~~~~~
 alias mapscii "telnet mapscii.me"
 alias starii "telnet towel.blinkenlights.nl"
