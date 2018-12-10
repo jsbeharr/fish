@@ -14,7 +14,7 @@ alias la "ls -lAh"
 alias all "ls -R * | less"
 
 # List all dot files
-alias dotfiles "ls -A | grep \"^\.\""
+alias dfs "ls -A | grep \"^\.\""
 
 # Set vi command to open neovim if neovim is installed
 alias vi "nvim"
