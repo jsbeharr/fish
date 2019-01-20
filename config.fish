@@ -16,6 +16,9 @@ alias all "ls -R * | less"
 # List all dot files
 alias dfs "ls -A | grep \"^\.\""
 
+# list copy output to clipboard
+alias copy "xclip -selection clipboard"
+
 # Lock the screen on gnome
 alias lock "dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
 
@@ -61,12 +64,11 @@ else
 end
 set -gx EDITOR $VISUAL
 
+# Set default browser
+set -gx BROWSER /usr/bin/brave
+
 # clear history on terminal exit
 function bye --on-process-exit %self
     builtin history clear
     echo Session history scrubbed. Goodbye
 end
-
-# iterm shell integration
-test -e {$HOME}/.iterm2_shell_integration.fish
-and source {$HOME}/.iterm2_shell_integration.fish
