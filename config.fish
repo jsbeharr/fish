@@ -37,6 +37,8 @@ abbr -a -g gaa git add -A
 abbr -a -g gcm git commit
 abbr -a -g gst git status
 abbr -a -g upg sudo pacman -Syyu
+abbr -a -g ins sudo pacman -S
+abbr -a -g rem sudo pacman -Rs
 
 # Colored Man
 set -xU LESS_TERMCAP_md (printf "\e[01;31m")
