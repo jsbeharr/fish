@@ -31,6 +31,13 @@ alias vimdiff "nvim -d"
 alias mapscii "telnet mapscii.me"
 alias starii "telnet towel.blinkenlights.nl"
 
+# Abbreviations
+abbr -a -g gco git checkout
+abbr -a -g gaa git add -A
+abbr -a -g gcm git commit
+abbr -a -g gst git status
+abbr -a -g upg sudo pacman -Syyu
+
 # Colored Man
 set -xU LESS_TERMCAP_md (printf "\e[01;31m")
 set -xU LESS_TERMCAP_me (printf "\e[0m")
