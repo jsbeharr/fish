@@ -16,33 +16,30 @@ alias all "ls -R * | less"
 # List all dot files
 alias dfs "ls -A | grep \"^\.\""
 
-if test (uname) = "Linux"
-  # Lock the screen on gnome
-  alias lock "dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
-  # list copy output to clipboard
-  alias copy "xclip -selection clipboard"
-end
-
-# Set vi command to open neovim if neovim is installed
-alias vi "nvim"
-alias vim "nvim"
-alias vimdiff "nvim -d"
-
 # For FUN! :) ~~~~~~~~~~~~~~~~~
 alias mapscii "telnet mapscii.me"
 alias starii "telnet towel.blinkenlights.nl"
 
-# Abbreviations
+# Git Abbreviations
 abbr -a -g gco git checkout
 abbr -a -g gaa git add -A
 abbr -a -g gcm git commit
 abbr -a -g gst git status
+# Alias and Abbreviations for
+# Linux and MacOS
 switch (uname)
 case Linux
+  # Lock the screen on gnome
+  alias lock "dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
+  # list copy output to clipboard
+  alias copy "xclip -selection clipboard"
   abbr -a -g upg sudo pacman -Syyu
   abbr -a -g ins sudo pacman -S
   abbr -a -g rem sudo pacman -Rs
 case Darwin
+  function copy 
+    cat $argv | pbcopy
+  end
   abbr -a -g upg brew update
   abbr -a -g ins brew install
   abbr -a -g rem brew uninstall
