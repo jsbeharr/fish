@@ -25,6 +25,7 @@ abbr -a -g gco git checkout
 abbr -a -g gaa git add -A
 abbr -a -g gcm git commit
 abbr -a -g gst git status
+abbr -a -g gpu git push
 # Alias and Abbreviations for
 # Linux and MacOS
 switch (uname)
