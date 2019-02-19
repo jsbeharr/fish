@@ -37,6 +37,7 @@ case Linux
   abbr -a -g upg sudo pacman -Syyu
   abbr -a -g ins sudo pacman -S
   abbr -a -g rem sudo pacman -Rs
+  abbr -a -g query sudo pacman -Ss
 case Darwin
   function copy 
     cat $argv | pbcopy
