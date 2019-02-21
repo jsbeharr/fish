@@ -30,9 +30,7 @@ abbr -a -g gpu git push
 # Linux and MacOS
 switch (uname)
 case Linux
-  # Lock the screen on gnome
-  alias lock "dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock"
-  # list copy output to clipboard
+  #  copy output to clipboard
   alias copy "xclip -selection clipboard"
   abbr -a -g upg sudo pacman -Syyu
   abbr -a -g ins sudo pacman -S
