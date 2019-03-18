@@ -38,7 +38,8 @@ case Linux
   abbr -a -g query sudo pacman -Ss
 case Darwin
   alias copy "pbcopy <"
-  abbr -a -g upg brew update
+  abbr -a -g upd brew update
+  abbr -a -g upg brew upgrade
   abbr -a -g ins brew install
   abbr -a -g rem brew uninstall
 end
