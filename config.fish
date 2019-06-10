@@ -56,6 +56,10 @@ set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 
 # Sets up GPU Support for tensorflow
 export LD_LIBRARY_PATH=/opt/cuda-9.0/lib64/
+# Qt settings
+export QT_SCALE_FACTOR=1
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCREEN_SCALE_FACTORS=2
 # python virtual env wrapper
 eval (python -m virtualfish auto_activation)
 
