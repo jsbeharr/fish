@@ -98,3 +98,4 @@ function bye --on-process-exit %self
   builtin history clear
   echo Session history scrubbed. Goodbye
 end
+source /opt/ros/melodic/share/rosbash/rosfish
