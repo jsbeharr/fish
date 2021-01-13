@@ -27,6 +27,7 @@ abbr -a -g gcm git commit
 abbr -a -g gst git status
 abbr -a -g gpu git push
 abbr -a -g gdif git diff
+
 # Alias and Abbreviations for
 # Linux and MacOS
 switch (uname)
