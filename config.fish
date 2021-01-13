@@ -34,16 +34,23 @@ switch (uname)
 case Linux
   #  copy output to clipboard
   alias copy "xclip -selection clipboard"
-  abbr -a -g upg sudo pacman -Syyu
-  abbr -a -g ins sudo pacman -S
-  abbr -a -g rem sudo pacman -Rs
-  abbr -a -g query sudo pacman -Ss
+  if type -q pacman
+    abbr -a upg sudo pacman -Syyu
+    abbr -a ins sudo pacman -S
+    abbr -a rem sudo pacman -Rs
+    abbr -a query sudo pacman -Ss
+  else if type -q apt
+    abbr -a upg sudo apt update
+    abbr -a ins sudo apt install
+    abbr -a rem sudo apt remove
+    abbr -a query sudo apt search
+  end
 case Darwin
   alias copy "pbcopy <"
-  abbr -a -g upd brew update
-  abbr -a -g upg brew upgrade
-  abbr -a -g ins brew install
-  abbr -a -g rem brew uninstall
+  abbr -a upd brew update
+  abbr -a upg brew upgrade
+  abbr -a ins brew install
+  abbr -a rem brew uninstall
 end
 
 # Colored Man
@@ -59,6 +66,10 @@ set -xU LESS_TERMCAP_us (printf "\e[01;32m")
 
 # Sets up GPU Support for tensorflow
 export LD_LIBRARY_PATH=/opt/cuda-9.0/lib64/
+# Qt settings
+export QT_SCALE_FACTOR=1
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_SCREEN_SCALE_FACTORS=2
 # python virtual env wrapper
 eval (python -m virtualfish auto_activation)
 
@@ -89,3 +100,4 @@ function bye --on-process-exit %self
   builtin history clear
   echo Session history scrubbed. Goodbye
 end
+source /opt/ros/melodic/share/rosbash/rosfish
